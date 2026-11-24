@@ -1,5 +1,5 @@
 // Only static public resources; never cache Google authentication or financial data.
-const CACHE='lyj-public-shell-v31';
+const CACHE='lyj-public-shell-v32';
 const ROOT=new URL('./',self.location.href);
 const FILES=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'].map(p=>new URL(p,ROOT).href);
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting())));
